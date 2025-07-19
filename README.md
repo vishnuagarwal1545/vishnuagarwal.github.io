@@ -1,69 +1,60 @@
-# al-folio
+# My Portfolio Website
 
-<div align="center">
+This is my personal portfolio website built with Jekyll and hosted on GitHub Pages. It showcases my projects, blog posts, and professional information.
 
-[![Preview](readme_preview/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
+## Features
 
-**A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.**
+- **About Me**: Personal introduction and background
+- **Projects**: Showcase of my GitHub projects and other work
+- **Blog**: Personal blog for sharing thoughts and insights
+- **Resume/CV**: Professional resume with downloadable PDF option
 
----
+## How to Update This Site
 
-[![deploy](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml)
-[![Maintainers](https://img.shields.io/badge/maintainers-4-success.svg)](#maintainers)
-[![GitHub contributors](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://github.com/alshedivat/al-folio/graphs/contributors/)
-[![Docker Image Version](https://img.shields.io/docker/v/amirpourmand/al-folio?sort=semver&label=docker%20image&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
-[![Docker Image Size](https://img.shields.io/docker/image-size/amirpourmand/al-folio?sort=date&label=docker%20image%20size&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
-[![Docker Pulls](https://img.shields.io/docker/pulls/amirpourmand/al-folio?color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
+### Basic Configuration
 
-[![GitHub release](https://img.shields.io/github/v/release/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/alshedivat/al-folio?color=blue)](https://github.com/alshedivat/al-folio/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/alshedivat/al-folio)](https://github.com/alshedivat/al-folio)
-[![GitHub forks](https://img.shields.io/github/forks/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/fork)
+1. Edit `_config.yml` to update site-wide settings:
+   - Update your name, contact information, and site description
+   - Customize site appearance and features
 
-</div>
+2. Update your profile picture:
+   - Replace `assets/img/prof_pic.jpg` with your own photo (keep the same filename)
 
-## User community
+### Content Pages
 
-The vibrant community of **al-folio** users is growing!
-Academics around the world use this theme for their homepages, blogs, lab pages, as well as webpages for courses, workshops, conferences, meetups, and more.
-Check out the community webpages below.
-Feel free to add your own page(s) by sending a PR.
+1. **About Me Page**:
+   - Edit `_pages/about.md` to update your personal information and bio
 
-<table>
-<tr>
-<td>Academics</td>
-<td>
-<a href="https://martinbulla.github.io" target="_blank">★</a>
-<a href="https://maruan.alshedivat.com" target="_blank">★</a>
-<a href="https://www.cs.columbia.edu/~chen1ru/" target="_blank">★</a>
-<a href="https://maithraraghu.com" target="_blank">★</a>
-<a href="https://platanios.org" target="_blank">★</a>
-<a href="https://otiliastr.github.io" target="_blank">★</a>
-<a href="https://www.maths.dur.ac.uk/~sxwc62/" target="_blank">★</a>
-<a href="https://jessachandler.com/" target="_blank">★</a>
-<a href="https://mayankm96.github.io/" target="_blank">★</a>
-<a href="https://markdean.info/" target="_blank">★</a>
-<a href="https://kakodkar.github.io/" target="_blank">★</a>
-<a href="https://sahirbhatnagar.com/" target="_blank">★</a>
-<a href="https://spd.gr/" target="_blank">★</a>
-<a href="https://jay-sarkar.github.io/" target="_blank">★</a>
-<a href="https://aborowska.github.io/" target="_blank">★</a>
-<a href="https://aditisgh.github.io/" target="_blank">★</a>
-<a href="https://alexhaydock.co.uk/" target="_blank">★</a>
-<a href="https://alixkeener.net/" target="_blank">★</a>
-<a href="https://andreea7b.github.io/" target="_blank">★</a>
-<a href="https://rishabhjoshi.github.io/" target="_blank">★</a>
-<a href="https://sheelabhadra.github.io/" target="_blank">★</a>
-<a href="https://giograno.me/" target="_blank">★</a>
-<a href="https://immsrini.github.io/" target="_blank">★</a>
-<a href="https://apooladian.github.io/" target="_blank">★</a>
-<a href="https://chinmoy-dutta.github.io/" target="_blank">★</a>
-<a href="https://liamcli.com/" target="_blank">★</a>
-<a href="https://yoonholee.com/" target="_blank">★</a>
-<a href="https://zrqiao.github.io/" target="_blank">★</a>
-<a href="https://abstractgeek.github.io/" target="_blank">★</a>
-<a href="https://www.compphys.de/" target="_blank">★</a>
-<a href="https://julianstreyczek.github.io" target="_blank">★</a>
+2. **Projects**:
+   - Edit existing project in `_projects/1_project.md` or create new project files
+   - Link to your GitHub repositories in the project files
+   - Update `_data/repositories.yml` to display your GitHub profile and repositories
+
+3. **Blog**:
+   - Add blog posts as markdown files in the `_posts` directory
+   - Use the format `YYYY-MM-DD-title.md` for filenames
+
+4. **Resume/CV**:
+   - Update your resume information
+   - Add your PDF resume to `assets/pdf/resume.pdf`
+
+### GitHub Pages Deployment
+
+This site is automatically deployed to GitHub Pages when you push changes to the main branch. The deployment is handled by GitHub Actions.
+
+## Local Development
+
+To run this site locally:
+
+1. Install Ruby and Jekyll (see [Jekyll Installation Guide](https://jekyllrb.com/docs/installation/))
+2. Clone this repository
+3. Run `bundle install` to install dependencies
+4. Run `bundle exec jekyll serve` to start the local server
+5. Visit `http://localhost:4000` in your browser
+
+## Credits
+
+This site is built with [Jekyll](https://jekyllrb.com/) using the [al-folio](https://github.com/alshedivat/al-folio) theme.
 <a href="https://sdaza.com" target="_blank">★</a>
 <a href="https://niweera.gq" target="_blank">★</a>
 <a href="https://www.alihkw.com" target="_blank">★</a>

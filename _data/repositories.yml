@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - vishnuagarwal
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  # Add your GitHub repositories here
+  # Format: username/repository
+  # Example:
+  # - vishnuagarwal/project1
+  # - vishnuagarwal/project2
