@@ -31,4 +31,4 @@ I'm excited to share this journey with you!
 
 ---
 
-*This is a template post. Feel free to modify it or use it as a reference for creating new blog posts.*
+_This is a template post. Feel free to modify it or use it as a reference for creating new blog posts._
