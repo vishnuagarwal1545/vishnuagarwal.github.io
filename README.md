@@ -14,6 +14,7 @@ This is my personal portfolio website built with Jekyll and hosted on GitHub Pag
 ### Basic Configuration
 
 1. Edit `_config.yml` to update site-wide settings:
+
    - Update your name, contact information, and site description
    - Customize site appearance and features
 
@@ -23,14 +24,17 @@ This is my personal portfolio website built with Jekyll and hosted on GitHub Pag
 ### Content Pages
 
 1. **About Me Page**:
+
    - Edit `_pages/about.md` to update your personal information and bio
 
 2. **Projects**:
+
    - Edit existing project in `_projects/1_project.md` or create new project files
    - Link to your GitHub repositories in the project files
    - Update `_data/repositories.yml` to display your GitHub profile and repositories
 
 3. **Blog**:
+
    - Add blog posts as markdown files in the `_posts` directory
    - Use the format `YYYY-MM-DD-title.md` for filenames
 
@@ -156,6 +160,7 @@ This site is built with [Jekyll](https://jekyllrb.com/) using the [al-folio](htt
 <a href="https://cbuelt.github.io/" target="_blank">★</a>
 <a href="https://mehrdad-noori.github.io/" target="_blank">★</a>
 <a href="https://arthurclerjon.github.io/" target="_blank">★</a>
+
 </td>
 </tr>
 <tr>
