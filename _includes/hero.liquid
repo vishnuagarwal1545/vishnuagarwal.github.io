@@ -20,12 +20,36 @@
      * To use your own background image, place an image at assets/img/hero-bg.jpg
      * or change the background-image URL below to point to your image
      */
+    
+    /* Set the background color for the entire page to match hero */
+    body {
+      background-color: var(--global-bg-color) !important;
+    }
+    
+    /* Match all about page elements to hero background color */
+    .container, 
+    .post, 
+    .post-header, 
+    .profile, 
+    article,
+    .social,
+    .more-info,
+    h1, h2, h3, h4, h5, h6,
+    .navbar {
+      background-color: var(--global-bg-color) !important;
+    }
+    
+    /* Adjust container margin to work better with full-height hero */
+    .container[role="main"] {
+      margin-top: 0 !important;
+      padding-top: 2rem;
+    }
     .hero-section {
       position: relative;
-      height: 70vh;
-      min-height: 500px;
-      /* Light gray background color as requested */
-      background-color: #f8f9fa;
+      height: 100vh;
+      min-height: 100vh;
+      /* Use CSS variable for background color to support dark mode */
+      background-color: var(--global-bg-color);
       /* Previous gradient background (commented out) */
       /* background: linear-gradient(135deg, #4a89dc 0%, #3a70c0 100%); */
       /* Uncomment the line below to use an image */
@@ -33,12 +57,12 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      margin-bottom: 3rem;
+      margin-bottom: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #212529; /* Changed from white to dark color for better contrast with light background */
+      color: var(--global-text-color); /* Use CSS variable for text color to support dark mode */
     }
 
     .hero-overlay {
@@ -47,7 +71,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.05); /* Reduced opacity for light background */
+      background-color: transparent; /* Remove the overlay to match the rest of the page */
     }
 
     .hero-content {
@@ -61,13 +85,15 @@
       font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Reduced shadow for light background */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for both light and dark modes */
+      color: var(--global-text-color);
     }
 
     .hero-subtitle {
       font-size: 1.5rem;
       margin-bottom: 2rem;
-      text-shadow: none; /* Removed shadow for better readability on light background */
+      text-shadow: none;
+      color: var(--global-text-color-light);
     }
 
     .hero-buttons {
@@ -86,23 +112,27 @@
     }
 
     .hero-buttons .btn-primary {
-      background-color: #4a89dc;
-      border-color: #4a89dc;
+      background-color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      color: var(--global-hover-text-color);
     }
 
     .hero-buttons .btn-primary:hover {
-      background-color: #3a70c0;
-      border-color: #3a70c0;
+      background-color: var(--global-hover-color);
+      border-color: var(--global-hover-color);
+      color: var(--global-hover-text-color);
     }
 
     .hero-buttons .btn-outline-light {
-      color: #212529;
-      border-color: #212529;
+      color: var(--global-text-color);
+      border-color: var(--global-text-color);
+      background-color: transparent;
     }
 
     .hero-buttons .btn-outline-light:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-      color: #000;
+      background-color: var(--global-hover-color);
+      color: var(--global-hover-text-color);
+      border-color: var(--global-hover-color);
     }
 
     /*
