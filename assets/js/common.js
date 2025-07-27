@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  // Detect operating system for search shortcut display
+  if (navigator.userAgent.indexOf("Windows") !== -1) {
+    $("body").addClass("windows-os");
+  }
+
+  // Ensure search button works on mobile devices
+  $("#search-toggle").on("click", function () {
+    openSearchModal();
+  });
+
+  // Explicitly initialize navbar toggle for Bootstrap 5
+  $(".navbar-toggler").on("click", function () {
+    $("#navbarNav").collapse("toggle");
+  });
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
     $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
@@ -26,7 +40,8 @@ $(document).ready(function () {
     var navSelector = "#toc-sidebar";
     var $myNav = $(navSelector);
     Toc.init($myNav);
-    $("body").scrollspy({
+    // Bootstrap 5 scrollspy initialization
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
       target: navSelector,
     });
   }
@@ -52,8 +67,8 @@ $(document).ready(function () {
     }
   });
 
-  // trigger popovers
-  $('[data-toggle="popover"]').popover({
+  // trigger popovers (Bootstrap 5 syntax)
+  $('[data-bs-toggle="popover"]').popover({
     trigger: "hover",
   });
 });

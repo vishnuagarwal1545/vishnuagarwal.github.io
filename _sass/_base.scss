@@ -245,7 +245,6 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
 }
@@ -1096,6 +1095,46 @@ nav[data-toggle="toc"] {
   }
 }
 
+/* Search button styles */
+#search-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Default styles for desktop */
+.desktop-search {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mobile-search {
+  display: none;
+}
+
+/* OS-specific styles */
+.shortcut-mac {
+  display: inline;
+}
+
+.shortcut-win {
+  display: none;
+}
+
+/* For Windows OS */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (pointer: fine) and (hover: hover) {
+  body.windows-os {
+    .shortcut-mac {
+      display: none;
+    }
+
+    .shortcut-win {
+      display: inline;
+    }
+  }
+}
+
 /* small screens */
 @media (max-width: 576px) {
   /* override stickyness so that the navigation does not follow scrolling */
@@ -1103,6 +1142,16 @@ nav[data-toggle="toc"] {
     visibility: hidden;
     height: 0;
     top: 0;
+  }
+
+  /* Search button responsive styles */
+  .desktop-search {
+    display: none;
+  }
+
+  .mobile-search {
+    display: inline-flex;
+    align-items: center;
   }
 }
 
