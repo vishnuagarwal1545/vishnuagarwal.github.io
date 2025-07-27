@@ -20,6 +20,11 @@
     <!-- Header -->
     {% include header.liquid %}
 
+    <!-- Hero Section -->
+    {% if page.url == "/" %}
+      {% include hero.liquid %}
+    {% endif %}
+
     <!-- Content -->
     <div class="container mt-5" role="main">
       {% if page.toc and page.toc.sidebar %}
